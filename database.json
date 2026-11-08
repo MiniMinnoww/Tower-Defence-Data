@@ -1,0 +1,19 @@
+{
+    "towers": [
+        {
+            "towerName": "Archer",
+            "towerDescription": "TODO",
+            "cost": 150
+        },
+        {
+            "towerName": "Soldier",
+            "towerDescription": "A simple guy with a pistol... and a lot of undiscovered firepower",
+            "cost": 40
+        },
+        {
+            "towerName": "Dummy Tower 2",
+            "towerDescription": "A sword-wielding tower with some combo and movement functionality later down the line! Very good at hitting multiple enemies, but has a low-ish reach",
+            "cost": 60
+        }
+    ]
+}
