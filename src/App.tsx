@@ -1,10 +1,13 @@
 import {DataProvider} from "./data/DataProvider.tsx";
-import {DataDebug} from "./data/DataDebug.tsx";
+import {TowerTable} from "./components/TowerTable.tsx";
+
+import "./style/main.css";
+import "./style/table.css";
 
 export const App = () => {
   return (
     <DataProvider>
-      <DataDebug />
+      <TowerTable />
     </DataProvider>
   )
 }
