@@ -3,17 +3,1029 @@
         {
             "towerName": "Archer",
             "towerDescription": "TODO",
-            "cost": 150
+            "cost": 150,
+            "baseSize": {
+                "x": 0,
+                "y": 0
+            },
+            "baseRange": 55,
+            "upgradeTree": {
+                "root": {
+                    "id": 0,
+                    "nodeName": "Unlocked",
+                    "description": null,
+                    "cost": 0,
+                    "upgrades": [],
+                    "children": [
+                        {
+                            "id": 1,
+                            "nodeName": "Fast Draw (not made)",
+                            "description": null,
+                            "cost": 0,
+                            "upgrades": [],
+                            "children": [
+                                {
+                                    "id": 2,
+                                    "nodeName": "Hurtful tip :(",
+                                    "description": "Makes the arrow do extra damage... interesting ik",
+                                    "cost": 50,
+                                    "upgrades": [
+                                        {
+                                            "type": "AddStatUpgrade",
+                                            "data": {
+                                                "upgradeableField": {
+                                                    "qualifiedName": "Content.Towers.Archer.Scripts.State.ArcherShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "fieldName": "extraArrowDamage",
+                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                },
+                                                "add": 5
+                                            }
+                                        }
+                                    ],
+                                    "children": [
+                                        {
+                                            "id": 3,
+                                            "nodeName": "Explosive Tip ;)",
+                                            "description": "Adds an explosive tip to the next arrow you shoot. The arrow will stick into the ground/enemy for 1 second before letting off a controlled explosion!",
+                                            "cost": 225,
+                                            "upgrades": [
+                                                {
+                                                    "type": "GiveSpecialUpgrade",
+                                                    "data": {
+                                                        "targetType": {
+                                                            "type": "ArcherExplodingArrowState",
+                                                            "data": {
+                                                                "startLag": 0,
+                                                                "endLag": 0,
+                                                                "baseCooldownTime": 0,
+                                                                "cooldownIcon": {
+                                                                    "fileID": 0
+                                                                },
+                                                                "explosionData": {
+                                                                    "worldPosition": {
+                                                                        "x": 0,
+                                                                        "y": 0,
+                                                                        "z": 0
+                                                                    },
+                                                                    "radius": 0,
+                                                                    "maxDamage": 0,
+                                                                    "speed": 0
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "children": [
+                                                {
+                                                    "id": 4,
+                                                    "nodeName": "Faster Reload (not made)",
+                                                    "description": null,
+                                                    "cost": 0,
+                                                    "upgrades": [],
+                                                    "children": [
+                                                        {
+                                                            "id": 5,
+                                                            "nodeName": "Piercing Tip?",
+                                                            "description": "Lets the arrow hit 3 enemies in a row instead of just 1!",
+                                                            "cost": 100,
+                                                            "upgrades": [
+                                                                {
+                                                                    "type": "SetStatUpgrade",
+                                                                    "data": {
+                                                                        "upgradeableField": {
+                                                                            "qualifiedName": "Content.Towers.Archer.Scripts.State.ArcherShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                            "fieldName": "pierce",
+                                                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                        },
+                                                                        "value": 3
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "id": 6,
+                                                                    "nodeName": null,
+                                                                    "description": null,
+                                                                    "cost": 0,
+                                                                    "upgrades": [],
+                                                                    "children": [
+                                                                        {
+                                                                            "id": 7,
+                                                                            "nodeName": null,
+                                                                            "description": null,
+                                                                            "cost": 0,
+                                                                            "upgrades": [],
+                                                                            "children": [
+                                                                                {
+                                                                                    "id": 8,
+                                                                                    "nodeName": null,
+                                                                                    "description": null,
+                                                                                    "cost": 0,
+                                                                                    "upgrades": [],
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "id": 9,
+                                                                                            "nodeName": null,
+                                                                                            "description": null,
+                                                                                            "cost": 0,
+                                                                                            "upgrades": [],
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "id": 10,
+                                                                                                    "nodeName": null,
+                                                                                                    "description": null,
+                                                                                                    "cost": 0,
+                                                                                                    "upgrades": [],
+                                                                                                    "children": []
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "id": 11,
+                                                            "nodeName": null,
+                                                            "description": null,
+                                                            "cost": 0,
+                                                            "upgrades": [],
+                                                            "children": [
+                                                                {
+                                                                    "id": 12,
+                                                                    "nodeName": null,
+                                                                    "description": null,
+                                                                    "cost": 0,
+                                                                    "upgrades": [],
+                                                                    "children": [
+                                                                        {
+                                                                            "id": 13,
+                                                                            "nodeName": null,
+                                                                            "description": null,
+                                                                            "cost": 0,
+                                                                            "upgrades": [],
+                                                                            "children": [
+                                                                                {
+                                                                                    "id": 14,
+                                                                                    "nodeName": null,
+                                                                                    "description": null,
+                                                                                    "cost": 0,
+                                                                                    "upgrades": [],
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "id": 15,
+                                                                                            "nodeName": null,
+                                                                                            "description": null,
+                                                                                            "cost": 0,
+                                                                                            "upgrades": [],
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "id": 16,
+                                                                                                    "nodeName": null,
+                                                                                                    "description": null,
+                                                                                                    "cost": 0,
+                                                                                                    "upgrades": [],
+                                                                                                    "children": []
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
         },
         {
             "towerName": "Soldier",
             "towerDescription": "A simple guy with a pistol... and a lot of undiscovered firepower",
-            "cost": 40
+            "cost": 40,
+            "baseSize": {
+                "x": 4,
+                "y": 4
+            },
+            "baseRange": 35,
+            "upgradeTree": {
+                "root": {
+                    "id": 0,
+                    "nodeName": "Unlocked",
+                    "description": "Soldier tower is a tower with a pistol...",
+                    "cost": 0,
+                    "upgrades": [],
+                    "children": [
+                        {
+                            "id": 1,
+                            "nodeName": "Damage, Pierce and Range",
+                            "description": "Increases the damage by 2, and pierce by 1, of the pistol. Also gives the tower a higher detection range.",
+                            "cost": 35,
+                            "upgrades": [
+                                {
+                                    "type": "AddStatUpgrade",
+                                    "data": {
+                                        "upgradeableField": {
+                                            "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                            "fieldName": "extraGunDamage",
+                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                        },
+                                        "add": 2
+                                    }
+                                },
+                                {
+                                    "type": "AddStatUpgrade",
+                                    "data": {
+                                        "upgradeableField": {
+                                            "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                            "fieldName": "pierce",
+                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                        },
+                                        "add": 1
+                                    }
+                                },
+                                {
+                                    "type": "AddRangeUpgrade",
+                                    "data": {
+                                        "rangeToAdd": 10
+                                    }
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "id": 2,
+                                    "nodeName": "Faster fire",
+                                    "description": "Increases the fire rate of the tower by 25%!",
+                                    "cost": 50,
+                                    "upgrades": [
+                                        {
+                                            "type": "MultiplyStatUpgrade",
+                                            "data": {
+                                                "upgradeableField": {
+                                                    "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "fieldName": "gunFireRateMultiplier",
+                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                },
+                                                "multiplier": 0.75
+                                            }
+                                        }
+                                    ],
+                                    "children": [
+                                        {
+                                            "id": 3,
+                                            "nodeName": "Grenade Toss",
+                                            "description": "Gives the soldier a grenade toss ability! Launches a grenade which explodes on contact with enemies or ground!",
+                                            "cost": 90,
+                                            "upgrades": [
+                                                {
+                                                    "type": "GiveSpecialUpgrade",
+                                                    "data": {
+                                                        "targetType": {
+                                                            "type": "SoldierGrenadeTossSpecial",
+                                                            "data": {
+                                                                "startLag": 0,
+                                                                "endLag": 0,
+                                                                "baseCooldownTime": 0,
+                                                                "cooldownIcon": {
+                                                                    "fileID": 0
+                                                                },
+                                                                "grenade": {
+                                                                    "fileID": 0
+                                                                },
+                                                                "startLagAnim": {
+                                                                    "fileID": 0
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "type": "AddStatUpgrade",
+                                                    "data": {
+                                                        "upgradeableField": {
+                                                            "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                            "fieldName": "extraGunDamage",
+                                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                        },
+                                                        "add": 2
+                                                    }
+                                                },
+                                                {
+                                                    "type": "MultiplyStatUpgrade",
+                                                    "data": {
+                                                        "upgradeableField": {
+                                                            "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                            "fieldName": "gunFireRateMultiplier",
+                                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                        },
+                                                        "multiplier": 0.9
+                                                    }
+                                                },
+                                                {
+                                                    "type": "MultiplyStatUpgrade",
+                                                    "data": {
+                                                        "upgradeableField": {
+                                                            "qualifiedName": "Content.Towers._Generic.Scripts.State.TowerMovementState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                            "fieldName": "moveSpeedMultiplier",
+                                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                        },
+                                                        "multiplier": 1.1
+                                                    }
+                                                }
+                                            ],
+                                            "children": [
+                                                {
+                                                    "id": 4,
+                                                    "nodeName": "Piercing Pistol",
+                                                    "description": "The standard pistol can now shoot through 5 enemies at once! Fire rate is also slightly increased, and grenade explosions are bigger!",
+                                                    "cost": 200,
+                                                    "upgrades": [
+                                                        {
+                                                            "type": "SetStatUpgrade",
+                                                            "data": {
+                                                                "upgradeableField": {
+                                                                    "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                    "fieldName": "pierce",
+                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                },
+                                                                "value": 5
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "MultiplyStatUpgrade",
+                                                            "data": {
+                                                                "upgradeableField": {
+                                                                    "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                    "fieldName": "gunFireRateMultiplier",
+                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                },
+                                                                "multiplier": 0.9
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "MultiplyStatUpgrade",
+                                                            "data": {
+                                                                "upgradeableField": {
+                                                                    "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierGrenadeTossSpecial, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                    "fieldName": "explosionSizeMultiplier",
+                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                },
+                                                                "multiplier": 1.25
+                                                            }
+                                                        }
+                                                    ],
+                                                    "children": [
+                                                        {
+                                                            "id": 5,
+                                                            "nodeName": "RPG",
+                                                            "description": "Gives you an RPG!",
+                                                            "cost": 500,
+                                                            "upgrades": [
+                                                                {
+                                                                    "type": "GiveSpecialUpgrade",
+                                                                    "data": {
+                                                                        "targetType": {
+                                                                            "type": "SoldierFireballCannonSpecial",
+                                                                            "data": {
+                                                                                "startLag": 0,
+                                                                                "endLag": 0,
+                                                                                "baseCooldownTime": 0,
+                                                                                "cooldownIcon": {
+                                                                                    "fileID": 0
+                                                                                },
+                                                                                "fireballCannonData": {
+                                                                                    "fileID": 0
+                                                                                },
+                                                                                "maxScreenShake": {
+                                                                                    "freq": 0,
+                                                                                    "amp": 0
+                                                                                },
+                                                                                "maxFireballKickbackAmount": 0
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "id": 6,
+                                                                    "nodeName": "Grenades for days",
+                                                                    "description": "When grenades explode, they also spawn 6 more grenades around them! Also increases fire rate",
+                                                                    "cost": 1500,
+                                                                    "upgrades": [
+                                                                        {
+                                                                            "type": "SetBooleanUpgrade",
+                                                                            "data": {
+                                                                                "upgradeableField": {
+                                                                                    "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierGrenadeTossSpecial, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "fieldName": "cluster",
+                                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                },
+                                                                                "value": 1
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "MultiplyStatUpgrade",
+                                                                            "data": {
+                                                                                "upgradeableField": {
+                                                                                    "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "fieldName": "gunFireRateMultiplier",
+                                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                },
+                                                                                "multiplier": 0.9
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "children": [
+                                                                        {
+                                                                            "id": 7,
+                                                                            "nodeName": "Weakspot Wanker",
+                                                                            "description": "Also increases pistol damage",
+                                                                            "cost": 2500,
+                                                                            "upgrades": [
+                                                                                {
+                                                                                    "type": "AddStatUpgrade",
+                                                                                    "data": {
+                                                                                        "upgradeableField": {
+                                                                                            "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                            "fieldName": "extraGunDamage",
+                                                                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                        },
+                                                                                        "add": 5
+                                                                                    }
+                                                                                },
+                                                                                {
+                                                                                    "type": "SetBooleanUpgrade",
+                                                                                    "data": {
+                                                                                        "upgradeableField": {
+                                                                                            "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                            "fieldName": "explodeOnWeakspot",
+                                                                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                        },
+                                                                                        "value": 1
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "children": [
+                                                                                {
+                                                                                    "id": 8,
+                                                                                    "nodeName": "Unstoppable Bullet",
+                                                                                    "description": null,
+                                                                                    "cost": 2000,
+                                                                                    "upgrades": [
+                                                                                        {
+                                                                                            "type": "AddStatUpgrade",
+                                                                                            "data": {
+                                                                                                "upgradeableField": {
+                                                                                                    "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                    "fieldName": "pierce",
+                                                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                                },
+                                                                                                "add": 1000
+                                                                                            }
+                                                                                        }
+                                                                                    ],
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "id": 9,
+                                                                                            "nodeName": "Ocean of Explosions",
+                                                                                            "description": null,
+                                                                                            "cost": 7500,
+                                                                                            "upgrades": [
+                                                                                                {
+                                                                                                    "type": "SetStatUpgrade",
+                                                                                                    "data": {
+                                                                                                        "upgradeableField": {
+                                                                                                            "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierRpgSpecial, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                            "fieldName": "grenadesShot",
+                                                                                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                                        },
+                                                                                                        "value": 3
+                                                                                                    }
+                                                                                                },
+                                                                                                {
+                                                                                                    "type": "SetStatUpgrade",
+                                                                                                    "data": {
+                                                                                                        "upgradeableField": {
+                                                                                                            "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierGrenadeTossSpecial, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                            "fieldName": "grenadesThrown",
+                                                                                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                                        },
+                                                                                                        "value": 3
+                                                                                                    }
+                                                                                                }
+                                                                                            ],
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "id": 10,
+                                                                                                    "nodeName": "RPG-Buff",
+                                                                                                    "description": "Every single explosion hit by the soldier increases the damage of your next RPG shot by 10% (stacks up to 200%)",
+                                                                                                    "cost": 25000,
+                                                                                                    "upgrades": [
+                                                                                                        {
+                                                                                                            "type": "SetBooleanUpgrade",
+                                                                                                            "data": {
+                                                                                                                "upgradeableField": {
+                                                                                                                    "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierRpgSpecial, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                                    "fieldName": "buffRpgOnGrenadeHit",
+                                                                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                                                },
+                                                                                                                "value": 1
+                                                                                                            }
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "SetBooleanUpgrade",
+                                                                                                            "data": {
+                                                                                                                "upgradeableField": {
+                                                                                                                    "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierGrenadeTossSpecial, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                                    "fieldName": "buffRpgOnGrenadeHit",
+                                                                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                                                },
+                                                                                                                "value": 1
+                                                                                                            }
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "children": []
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "id": 11,
+                                                            "nodeName": "Super Soldier Serum",
+                                                            "description": "Gives the super soldier serum. Also increases base stats by a bit",
+                                                            "cost": 400,
+                                                            "upgrades": [
+                                                                {
+                                                                    "type": "GiveSpecialUpgrade",
+                                                                    "data": {
+                                                                        "targetType": {
+                                                                            "type": "SoldierSuperSoldierSerumSpecial",
+                                                                            "data": {
+                                                                                "startLag": 0,
+                                                                                "endLag": 0,
+                                                                                "baseCooldownTime": 0,
+                                                                                "cooldownIcon": {
+                                                                                    "fileID": 0
+                                                                                },
+                                                                                "serumParticlePrefab": {
+                                                                                    "fileID": 0
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "MultiplyStatUpgrade",
+                                                                    "data": {
+                                                                        "upgradeableField": {
+                                                                            "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                            "fieldName": "gunFireRateMultiplier",
+                                                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                        },
+                                                                        "multiplier": 0.9
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "AddStatUpgrade",
+                                                                    "data": {
+                                                                        "upgradeableField": {
+                                                                            "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                            "fieldName": "extraGunDamage",
+                                                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                        },
+                                                                        "add": 3
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "id": 12,
+                                                                    "nodeName": "Big Hitter",
+                                                                    "description": "Combos!! Also increase range for unmanned towers, and fire rate!",
+                                                                    "cost": 1250,
+                                                                    "upgrades": [
+                                                                        {
+                                                                            "type": "SetBooleanUpgrade",
+                                                                            "data": {
+                                                                                "upgradeableField": {
+                                                                                    "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "fieldName": "bigHitter",
+                                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                },
+                                                                                "value": 1
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "AddRangeUpgrade",
+                                                                            "data": {
+                                                                                "rangeToAdd": 30
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "MultiplyStatUpgrade",
+                                                                            "data": {
+                                                                                "upgradeableField": {
+                                                                                    "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierShootingState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "fieldName": "gunFireRateMultiplier",
+                                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                },
+                                                                                "multiplier": 0.89
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "children": [
+                                                                        {
+                                                                            "id": 13,
+                                                                            "nodeName": "Grenade trap",
+                                                                            "description": "Makes grenades only explode on impact with an enemy! Grenades can now lie on the floor and explode when an enemy walks over them... BOOM! Grenades are also stronger.",
+                                                                            "cost": 1500,
+                                                                            "upgrades": [
+                                                                                {
+                                                                                    "type": "SetBooleanUpgrade",
+                                                                                    "data": {
+                                                                                        "upgradeableField": {
+                                                                                            "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierGrenadeTossSpecial, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                            "fieldName": "explodeWhenHitGround",
+                                                                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                        },
+                                                                                        "value": 0
+                                                                                    }
+                                                                                },
+                                                                                {
+                                                                                    "type": "MultiplyStatUpgrade",
+                                                                                    "data": {
+                                                                                        "upgradeableField": {
+                                                                                            "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierGrenadeTossSpecial, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                            "fieldName": "explosionDamageMultiplier",
+                                                                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                        },
+                                                                                        "multiplier": 1.5
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "children": [
+                                                                                {
+                                                                                    "id": 14,
+                                                                                    "nodeName": "Seeping Serum",
+                                                                                    "description": "When using the serum, you emit an aura that buffs towers inside of it with stat buffs that are ~25% of the serum's buffs.",
+                                                                                    "cost": 2000,
+                                                                                    "upgrades": [
+                                                                                        {
+                                                                                            "type": "SetBooleanUpgrade",
+                                                                                            "data": {
+                                                                                                "upgradeableField": {
+                                                                                                    "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierSuperSoldierSerumSpecial, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                    "fieldName": "doSerumAOE",
+                                                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                                },
+                                                                                                "value": 1
+                                                                                            }
+                                                                                        },
+                                                                                        {
+                                                                                            "type": "SetStatUpgrade",
+                                                                                            "data": {
+                                                                                                "upgradeableField": {
+                                                                                                    "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierSuperSoldierSerumSpecial, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                    "fieldName": "serumAOERange",
+                                                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                                },
+                                                                                                "value": 50
+                                                                                            }
+                                                                                        }
+                                                                                    ],
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "id": 15,
+                                                                                            "nodeName": "Cooldown Clanker",
+                                                                                            "description": null,
+                                                                                            "cost": 2000,
+                                                                                            "upgrades": [
+                                                                                                {
+                                                                                                    "type": "SetBooleanUpgrade",
+                                                                                                    "data": {
+                                                                                                        "upgradeableField": {
+                                                                                                            "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierSuperSoldierSerumSpecial, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                            "fieldName": "serumCooldownAbilityUnlocked",
+                                                                                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                                        },
+                                                                                                        "value": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            ],
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "id": 16,
+                                                                                                    "nodeName": "You and whose army?",
+                                                                                                    "description": "Makes the serum buff range massive",
+                                                                                                    "cost": 0,
+                                                                                                    "upgrades": [
+                                                                                                        {
+                                                                                                            "type": "AddStatUpgrade",
+                                                                                                            "data": {
+                                                                                                                "upgradeableField": {
+                                                                                                                    "qualifiedName": "Content.Towers.Soldier.Scripts.State.SoldierSuperSoldierSerumSpecial, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                                    "fieldName": "serumAOERange",
+                                                                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                                                                },
+                                                                                                                "add": 10000
+                                                                                                            }
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "children": []
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
         },
         {
             "towerName": "Dummy Tower 2",
             "towerDescription": "A sword-wielding tower with some combo and movement functionality later down the line! Very good at hitting multiple enemies, but has a low-ish reach",
-            "cost": 60
+            "cost": 60,
+            "baseSize": {
+                "x": 2,
+                "y": 2
+            },
+            "baseRange": 19.5,
+            "upgradeTree": {
+                "root": {
+                    "id": 0,
+                    "nodeName": "Unlocked",
+                    "description": null,
+                    "cost": 0,
+                    "upgrades": [],
+                    "children": [
+                        {
+                            "id": 1,
+                            "nodeName": "Stronger Slash",
+                            "description": "Makes the sword do 3 extra damage",
+                            "cost": 40,
+                            "upgrades": [
+                                {
+                                    "type": "AddStatUpgrade",
+                                    "data": {
+                                        "upgradeableField": {
+                                            "qualifiedName": "Content.Towers.Swordsman.Scripts.State.SwordsmanSwordAttackState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                            "fieldName": "extraSwordDamage",
+                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                        },
+                                        "add": 3
+                                    }
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "id": 2,
+                                    "nodeName": "Speedy Swordsman",
+                                    "description": "Grants a double jump, as well as faster movement and attack speed!",
+                                    "cost": 100,
+                                    "upgrades": [
+                                        {
+                                            "type": "SetBooleanUpgrade",
+                                            "data": {
+                                                "upgradeableField": {
+                                                    "qualifiedName": "Content.Towers.Swordsman.Scripts.State.SwordsmanMovementState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "fieldName": "doubleJumpUnlocked",
+                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                },
+                                                "value": 1
+                                            }
+                                        },
+                                        {
+                                            "type": "MultiplyStatUpgrade",
+                                            "data": {
+                                                "upgradeableField": {
+                                                    "qualifiedName": "Content.Towers._Generic.Scripts.State.TowerMovementState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "fieldName": "moveSpeedMultiplier",
+                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                },
+                                                "multiplier": 1.25
+                                            }
+                                        },
+                                        {
+                                            "type": "AddStatUpgrade",
+                                            "data": {
+                                                "upgradeableField": {
+                                                    "qualifiedName": "Content.Towers.Swordsman.Scripts.State.SwordsmanSwordAttackState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "fieldName": "attackSpeed",
+                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                },
+                                                "add": 0.5
+                                            }
+                                        }
+                                    ],
+                                    "children": [
+                                        {
+                                            "id": 3,
+                                            "nodeName": "Sword Strike",
+                                            "description": "A special move that thrusts the sword into enemies... freaky style",
+                                            "cost": 150,
+                                            "upgrades": [
+                                                {
+                                                    "type": "GiveSpecialUpgrade",
+                                                    "data": {
+                                                        "targetType": {
+                                                            "type": "SwordsmanThrustSpecial",
+                                                            "data": {
+                                                                "startLag": 0,
+                                                                "endLag": 0,
+                                                                "baseCooldownTime": 0,
+                                                                "cooldownIcon": {
+                                                                    "fileID": 0
+                                                                },
+                                                                "thrustForce": 0,
+                                                                "chargeThrustAnim": {
+                                                                    "fileID": 0
+                                                                },
+                                                                "thrustAnim": {
+                                                                    "fileID": 0
+                                                                },
+                                                                "swordWeaponData": {
+                                                                    "fileID": 0
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "children": [
+                                                {
+                                                    "id": 4,
+                                                    "nodeName": "Reaching Sword",
+                                                    "description": "Sword reach further!",
+                                                    "cost": 125,
+                                                    "upgrades": [
+                                                        {
+                                                            "type": "AddRangeUpgrade",
+                                                            "data": {
+                                                                "rangeToAdd": 5.5
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "AddStatUpgrade",
+                                                            "data": {
+                                                                "upgradeableField": {
+                                                                    "qualifiedName": "Content.Towers.Swordsman.Scripts.State.SwordsmanSwordAttackState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                    "fieldName": "extraRange",
+                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                },
+                                                                "add": 5.5
+                                                            }
+                                                        }
+                                                    ],
+                                                    "children": [
+                                                        {
+                                                            "id": 5,
+                                                            "nodeName": "Multi-Thrust",
+                                                            "description": null,
+                                                            "cost": 0,
+                                                            "upgrades": [
+                                                                {
+                                                                    "type": "GiveSpecialUpgrade",
+                                                                    "data": {
+                                                                        "targetType": {
+                                                                            "type": "SwordsmanMultiThrustSpecial",
+                                                                            "data": {
+                                                                                "startLag": 0,
+                                                                                "endLag": 0,
+                                                                                "baseCooldownTime": 0,
+                                                                                "cooldownIcon": {
+                                                                                    "fileID": 0
+                                                                                },
+                                                                                "swordData": {
+                                                                                    "fileID": 0
+                                                                                },
+                                                                                "maxEnemyTimeBoostHits": 10,
+                                                                                "timeLeftAtStart": 0,
+                                                                                "timePerEnemyHit": 0,
+                                                                                "maxTurnSpeed": 0,
+                                                                                "speedFalloff": 0,
+                                                                                "turnSpeed": 4,
+                                                                                "falloffStartPercentage": 0.3,
+                                                                                "chargeThrustAnim": {
+                                                                                    "fileID": 0
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "id": 11,
+                                                            "nodeName": "Scoop",
+                                                            "description": null,
+                                                            "cost": 0,
+                                                            "upgrades": [
+                                                                {
+                                                                    "type": "GiveSpecialUpgrade",
+                                                                    "data": {
+                                                                        "targetType": {
+                                                                            "type": "SwordsmanScoopSpecial",
+                                                                            "data": {
+                                                                                "startLag": 0,
+                                                                                "endLag": 0,
+                                                                                "baseCooldownTime": 0,
+                                                                                "cooldownIcon": {
+                                                                                    "fileID": 0
+                                                                                },
+                                                                                "swordWeaponData": {
+                                                                                    "fileID": 0
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
         }
     ]
 }
