@@ -1,6 +1,225 @@
 {
     "towers": [
         {
+            "towerName": "Dummy Tower 2",
+            "towerDescription": "A sword-wielding tower with some combo and movement functionality later down the line! Very good at hitting multiple enemies, but has a low-ish reach",
+            "cost": 60,
+            "baseSize": {
+                "x": 2,
+                "y": 2
+            },
+            "baseRange": 19.5,
+            "upgradeTree": {
+                "root": {
+                    "id": 0,
+                    "nodeName": "Unlocked",
+                    "description": null,
+                    "cost": 0,
+                    "upgrades": [],
+                    "children": [
+                        {
+                            "id": 1,
+                            "nodeName": "Stronger Slash",
+                            "description": "Makes the sword do 3 extra damage",
+                            "cost": 40,
+                            "upgrades": [
+                                {
+                                    "type": "AddStatUpgrade",
+                                    "data": {
+                                        "upgradeableField": {
+                                            "qualifiedName": "Content.Towers.Swordsman.Scripts.State.SwordsmanSwordAttackState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                            "fieldName": "extraSwordDamage",
+                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                        },
+                                        "add": 3
+                                    }
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "id": 2,
+                                    "nodeName": "Speedy Swordsman",
+                                    "description": "Grants a double jump, as well as faster movement and attack speed!",
+                                    "cost": 100,
+                                    "upgrades": [
+                                        {
+                                            "type": "SetBooleanUpgrade",
+                                            "data": {
+                                                "upgradeableField": {
+                                                    "qualifiedName": "Content.Towers.Swordsman.Scripts.State.SwordsmanMovementState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "fieldName": "doubleJumpUnlocked",
+                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                },
+                                                "value": 1
+                                            }
+                                        },
+                                        {
+                                            "type": "MultiplyStatUpgrade",
+                                            "data": {
+                                                "upgradeableField": {
+                                                    "qualifiedName": "Content.Towers._Generic.Scripts.State.TowerMovementState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "fieldName": "moveSpeedMultiplier",
+                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                },
+                                                "multiplier": 1.25
+                                            }
+                                        },
+                                        {
+                                            "type": "AddStatUpgrade",
+                                            "data": {
+                                                "upgradeableField": {
+                                                    "qualifiedName": "Content.Towers.Swordsman.Scripts.State.SwordsmanSwordAttackState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "fieldName": "attackSpeed",
+                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                },
+                                                "add": 0.5
+                                            }
+                                        }
+                                    ],
+                                    "children": [
+                                        {
+                                            "id": 3,
+                                            "nodeName": "Sword Strike",
+                                            "description": "A special move that thrusts the sword into enemies... freaky style",
+                                            "cost": 150,
+                                            "upgrades": [
+                                                {
+                                                    "type": "GiveSpecialUpgrade",
+                                                    "data": {
+                                                        "targetType": {
+                                                            "type": "SwordsmanThrustSpecial",
+                                                            "data": {
+                                                                "startLag": 0,
+                                                                "endLag": 0,
+                                                                "baseCooldownTime": 0,
+                                                                "cooldownIcon": {
+                                                                    "fileID": 0
+                                                                },
+                                                                "thrustForce": 0,
+                                                                "chargeThrustAnim": {
+                                                                    "fileID": 0
+                                                                },
+                                                                "thrustAnim": {
+                                                                    "fileID": 0
+                                                                },
+                                                                "swordWeaponData": {
+                                                                    "fileID": 0
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "children": [
+                                                {
+                                                    "id": 4,
+                                                    "nodeName": "Reaching Sword",
+                                                    "description": "Sword reach further!",
+                                                    "cost": 125,
+                                                    "upgrades": [
+                                                        {
+                                                            "type": "AddRangeUpgrade",
+                                                            "data": {
+                                                                "rangeToAdd": 5.5
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "AddStatUpgrade",
+                                                            "data": {
+                                                                "upgradeableField": {
+                                                                    "qualifiedName": "Content.Towers.Swordsman.Scripts.State.SwordsmanSwordAttackState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                    "fieldName": "extraRange",
+                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                                                },
+                                                                "add": 5.5
+                                                            }
+                                                        }
+                                                    ],
+                                                    "children": [
+                                                        {
+                                                            "id": 5,
+                                                            "nodeName": "Multi-Thrust",
+                                                            "description": null,
+                                                            "cost": 0,
+                                                            "upgrades": [
+                                                                {
+                                                                    "type": "GiveSpecialUpgrade",
+                                                                    "data": {
+                                                                        "targetType": {
+                                                                            "type": "SwordsmanMultiThrustSpecial",
+                                                                            "data": {
+                                                                                "startLag": 0,
+                                                                                "endLag": 0,
+                                                                                "baseCooldownTime": 0,
+                                                                                "cooldownIcon": {
+                                                                                    "fileID": 0
+                                                                                },
+                                                                                "swordData": {
+                                                                                    "fileID": 0
+                                                                                },
+                                                                                "maxEnemyTimeBoostHits": 10,
+                                                                                "timeLeftAtStart": 0,
+                                                                                "timePerEnemyHit": 0,
+                                                                                "maxTurnSpeed": 0,
+                                                                                "speedFalloff": 0,
+                                                                                "turnSpeed": 4,
+                                                                                "falloffStartPercentage": 0.3,
+                                                                                "chargeThrustAnim": {
+                                                                                    "fileID": 0
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "id": 11,
+                                                            "nodeName": "Scoop",
+                                                            "description": null,
+                                                            "cost": 0,
+                                                            "upgrades": [
+                                                                {
+                                                                    "type": "GiveSpecialUpgrade",
+                                                                    "data": {
+                                                                        "targetType": {
+                                                                            "type": "SwordsmanScoopSpecial",
+                                                                            "data": {
+                                                                                "startLag": 0,
+                                                                                "endLag": 0,
+                                                                                "baseCooldownTime": 0,
+                                                                                "cooldownIcon": {
+                                                                                    "fileID": 0
+                                                                                },
+                                                                                "swordWeaponData": {
+                                                                                    "fileID": 0
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
             "towerName": "Archer",
             "towerDescription": "TODO",
             "cost": 150,
@@ -795,225 +1014,6 @@
                                                                     ]
                                                                 }
                                                             ]
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "towerName": "Dummy Tower 2",
-            "towerDescription": "A sword-wielding tower with some combo and movement functionality later down the line! Very good at hitting multiple enemies, but has a low-ish reach",
-            "cost": 60,
-            "baseSize": {
-                "x": 2,
-                "y": 2
-            },
-            "baseRange": 19.5,
-            "upgradeTree": {
-                "root": {
-                    "id": 0,
-                    "nodeName": "Unlocked",
-                    "description": null,
-                    "cost": 0,
-                    "upgrades": [],
-                    "children": [
-                        {
-                            "id": 1,
-                            "nodeName": "Stronger Slash",
-                            "description": "Makes the sword do 3 extra damage",
-                            "cost": 40,
-                            "upgrades": [
-                                {
-                                    "type": "AddStatUpgrade",
-                                    "data": {
-                                        "upgradeableField": {
-                                            "qualifiedName": "Content.Towers.Swordsman.Scripts.State.SwordsmanSwordAttackState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                            "fieldName": "extraSwordDamage",
-                                            "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                            "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                                        },
-                                        "add": 3
-                                    }
-                                }
-                            ],
-                            "children": [
-                                {
-                                    "id": 2,
-                                    "nodeName": "Speedy Swordsman",
-                                    "description": "Grants a double jump, as well as faster movement and attack speed!",
-                                    "cost": 100,
-                                    "upgrades": [
-                                        {
-                                            "type": "SetBooleanUpgrade",
-                                            "data": {
-                                                "upgradeableField": {
-                                                    "qualifiedName": "Content.Towers.Swordsman.Scripts.State.SwordsmanMovementState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                                    "fieldName": "doubleJumpUnlocked",
-                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                                                },
-                                                "value": 1
-                                            }
-                                        },
-                                        {
-                                            "type": "MultiplyStatUpgrade",
-                                            "data": {
-                                                "upgradeableField": {
-                                                    "qualifiedName": "Content.Towers._Generic.Scripts.State.TowerMovementState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                                    "fieldName": "moveSpeedMultiplier",
-                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                                                },
-                                                "multiplier": 1.25
-                                            }
-                                        },
-                                        {
-                                            "type": "AddStatUpgrade",
-                                            "data": {
-                                                "upgradeableField": {
-                                                    "qualifiedName": "Content.Towers.Swordsman.Scripts.State.SwordsmanSwordAttackState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                                    "fieldName": "attackSpeed",
-                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                                                },
-                                                "add": 0.5
-                                            }
-                                        }
-                                    ],
-                                    "children": [
-                                        {
-                                            "id": 3,
-                                            "nodeName": "Sword Strike",
-                                            "description": "A special move that thrusts the sword into enemies... freaky style",
-                                            "cost": 150,
-                                            "upgrades": [
-                                                {
-                                                    "type": "GiveSpecialUpgrade",
-                                                    "data": {
-                                                        "targetType": {
-                                                            "type": "SwordsmanThrustSpecial",
-                                                            "data": {
-                                                                "startLag": 0,
-                                                                "endLag": 0,
-                                                                "baseCooldownTime": 0,
-                                                                "cooldownIcon": {
-                                                                    "fileID": 0
-                                                                },
-                                                                "thrustForce": 0,
-                                                                "chargeThrustAnim": {
-                                                                    "fileID": 0
-                                                                },
-                                                                "thrustAnim": {
-                                                                    "fileID": 0
-                                                                },
-                                                                "swordWeaponData": {
-                                                                    "fileID": 0
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            ],
-                                            "children": [
-                                                {
-                                                    "id": 4,
-                                                    "nodeName": "Reaching Sword",
-                                                    "description": "Sword reach further!",
-                                                    "cost": 125,
-                                                    "upgrades": [
-                                                        {
-                                                            "type": "AddRangeUpgrade",
-                                                            "data": {
-                                                                "rangeToAdd": 5.5
-                                                            }
-                                                        },
-                                                        {
-                                                            "type": "AddStatUpgrade",
-                                                            "data": {
-                                                                "upgradeableField": {
-                                                                    "qualifiedName": "Content.Towers.Swordsman.Scripts.State.SwordsmanSwordAttackState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                                                    "fieldName": "extraRange",
-                                                                    "baseTypeName": "GenericState.GenericBaseState`1[[Towers.FirstPersonTowers.States.FirstPersonTowerBaseState, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                                                    "attributeName": "Upgrades.Upgradeable, Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                                                                },
-                                                                "add": 5.5
-                                                            }
-                                                        }
-                                                    ],
-                                                    "children": [
-                                                        {
-                                                            "id": 5,
-                                                            "nodeName": "Multi-Thrust",
-                                                            "description": null,
-                                                            "cost": 0,
-                                                            "upgrades": [
-                                                                {
-                                                                    "type": "GiveSpecialUpgrade",
-                                                                    "data": {
-                                                                        "targetType": {
-                                                                            "type": "SwordsmanMultiThrustSpecial",
-                                                                            "data": {
-                                                                                "startLag": 0,
-                                                                                "endLag": 0,
-                                                                                "baseCooldownTime": 0,
-                                                                                "cooldownIcon": {
-                                                                                    "fileID": 0
-                                                                                },
-                                                                                "swordData": {
-                                                                                    "fileID": 0
-                                                                                },
-                                                                                "maxEnemyTimeBoostHits": 10,
-                                                                                "timeLeftAtStart": 0,
-                                                                                "timePerEnemyHit": 0,
-                                                                                "maxTurnSpeed": 0,
-                                                                                "speedFalloff": 0,
-                                                                                "turnSpeed": 4,
-                                                                                "falloffStartPercentage": 0.3,
-                                                                                "chargeThrustAnim": {
-                                                                                    "fileID": 0
-                                                                                }
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                            ],
-                                                            "children": []
-                                                        },
-                                                        {
-                                                            "id": 11,
-                                                            "nodeName": "Scoop",
-                                                            "description": null,
-                                                            "cost": 0,
-                                                            "upgrades": [
-                                                                {
-                                                                    "type": "GiveSpecialUpgrade",
-                                                                    "data": {
-                                                                        "targetType": {
-                                                                            "type": "SwordsmanScoopSpecial",
-                                                                            "data": {
-                                                                                "startLag": 0,
-                                                                                "endLag": 0,
-                                                                                "baseCooldownTime": 0,
-                                                                                "cooldownIcon": {
-                                                                                    "fileID": 0
-                                                                                },
-                                                                                "swordWeaponData": {
-                                                                                    "fileID": 0
-                                                                                }
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                            ],
-                                                            "children": []
                                                         }
                                                     ]
                                                 }
